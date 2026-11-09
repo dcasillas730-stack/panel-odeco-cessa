@@ -1,0 +1,646 @@
+{
+  "staffList": [
+    {
+      "id": "staff-1",
+      "fullName": "Lic. Diego Casillas",
+      "role": "Encargado de Reclamos ODECO",
+      "deskIdentifier": "Módulo Central de Jefatura",
+      "phoneExtension": "Ext. 101",
+      "mobileContact": "+591 712-34501",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "DC",
+      "deskPosition": 1,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-2",
+      "fullName": "Dra. Carmen Mendoza",
+      "role": "Analista Legal de Reclamos",
+      "deskIdentifier": "Ventanilla 1 - Audiencias y Descargos",
+      "phoneExtension": "Ext. 102",
+      "mobileContact": "+591 712-34502",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "CM",
+      "deskPosition": 2,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-3",
+      "fullName": "Ing. Roberto Siles",
+      "role": "Inspector Técnico de Campo / Notificador",
+      "deskIdentifier": "Escritorio ODECO-02 (Técnica)",
+      "phoneExtension": "Ext. 103",
+      "mobileContact": "+591 712-34503",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "RS",
+      "deskPosition": 3,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-4",
+      "fullName": "Lic. Javier Morales",
+      "role": "Oficial de Recepción y Reclamaciones",
+      "deskIdentifier": "Ventanilla 2 - Recepción al Usuario",
+      "phoneExtension": "Ext. 104",
+      "mobileContact": "+591 712-34504",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "JM",
+      "deskPosition": 4,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-5",
+      "fullName": "Sra. Sonia Choque",
+      "role": "Atención al Usuario y Plataforma",
+      "deskIdentifier": "Ventanilla 3 - Orientación Rápida",
+      "phoneExtension": "Ext. 105",
+      "mobileContact": "+591 712-34505",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "SC",
+      "deskPosition": 5,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-6",
+      "fullName": "Tec. Marcela Gutiérrez",
+      "role": "Asistente de Conciliación y Archivo",
+      "deskIdentifier": "Escritorio ODECO-03 (Expedientes)",
+      "phoneExtension": "Ext. 106",
+      "mobileContact": "+591 712-34506",
+      "status": "at_desk",
+      "assignedShift": "08:00 - 16:00",
+      "avatarInitials": "MG",
+      "deskPosition": 6,
+      "isProvidingQueueSupport": false
+    },
+    {
+      "id": "staff-7",
+      "fullName": "Lic. Paola Rivera",
+      "role": "Operadora Contact Center ODECO",
+      "deskIdentifier": "Contact Center - Cabina 01 (Línea 800)",
+      "phoneExtension": "Ext. 110",
+      "mobileContact": "+591 712-34510",
+      "status": "at_desk",
+      "assignedShift": "07:30 - 15:30 (Turno Mañana)",
+      "avatarInitials": "PR",
+      "deskPosition": 7,
+      "department": "contact_center",
+      "contactCenterSchedule": {
+        "shiftName": "Turno Mañana Contact Center",
+        "startTime": "07:30",
+        "endTime": "15:30",
+        "lunchBreakTime": "12:00 - 12:30 (30 min)",
+        "activeDays": "Lunes a Viernes",
+        "notes": "Recepción de llamadas de reclamo y canal telefónico AETN"
+      }
+    },
+    {
+      "id": "staff-8",
+      "fullName": "Lic. Andrea Salinas",
+      "role": "Operadora Contact Center ODECO",
+      "deskIdentifier": "Contact Center - Cabina 02 (Reclamos en Línea)",
+      "phoneExtension": "Ext. 111",
+      "mobileContact": "+591 712-34511",
+      "status": "at_desk",
+      "assignedShift": "10:00 - 18:00 (Turno Tarde)",
+      "avatarInitials": "AS",
+      "deskPosition": 8,
+      "department": "contact_center",
+      "contactCenterSchedule": {
+        "shiftName": "Turno Tarde Contact Center",
+        "startTime": "10:00",
+        "endTime": "18:00",
+        "lunchBreakTime": "13:30 - 14:00 (30 min)",
+        "activeDays": "Lunes a Viernes",
+        "notes": "Monitoreo de reclamos web y atención telefónica continua"
+      }
+    }
+  ],
+  "leavesList": [
+    {
+      "id": "leave-1794182435543",
+      "staffId": "staff-3",
+      "staffName": "Ing. Roberto Siles",
+      "deskIdentifier": "Escritorio ODECO-02 (Técnica)",
+      "role": "Inspector Técnico de Campo / Notificador",
+      "category": "refrigerio_reglamentario",
+      "destination": "Refrigerio / Comedor",
+      "departureTime": "20:00",
+      "estimatedReturnTime": "20:20",
+      "departureDate": "2026-11-09",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "20:06"
+    },
+    {
+      "id": "leave-1794182392985",
+      "staffId": "staff-3",
+      "staffName": "Ing. Roberto Siles",
+      "deskIdentifier": "Escritorio ODECO-02 (Técnica)",
+      "role": "Inspector Técnico de Campo / Notificador",
+      "category": "salida_bano",
+      "destination": "Servicios Higiénicos / Baño",
+      "departureTime": "19:59",
+      "estimatedReturnTime": "20:09",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "20:00"
+    },
+    {
+      "id": "leave-1794182370389",
+      "staffId": "staff-2",
+      "staffName": "Dra. Carmen Mendoza",
+      "deskIdentifier": "Ventanilla 1 - Audiencias y Descargos",
+      "role": "Analista Legal de Reclamos",
+      "category": "refrigerio_reglamentario",
+      "destination": "-",
+      "departureTime": "19:59",
+      "estimatedReturnTime": "20:29",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "20:00"
+    },
+    {
+      "id": "leave-1794182279368",
+      "staffId": "staff-1",
+      "staffName": "Lic. Diego Casillas",
+      "deskIdentifier": "Módulo Central de Jefatura",
+      "role": "Encargado de Reclamos ODECO",
+      "category": "tramite_aetn_gerencia",
+      "destination": "Zona Norte - Notificación Reclamante",
+      "caseNumber": "REC-AETN-8041",
+      "caseSubject": "Sobretasa por consumo no registrado en medidor trifásico",
+      "departureTime": "19:57",
+      "estimatedReturnTime": "20:27",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "20:00"
+    },
+    {
+      "id": "leave-1794182124722",
+      "staffId": "staff-1",
+      "staffName": "Lic. Diego Casillas",
+      "deskIdentifier": "Módulo Central de Jefatura",
+      "role": "Encargado de Reclamos ODECO",
+      "category": "refrigerio_reglamentario",
+      "destination": "-",
+      "departureTime": "19:55",
+      "estimatedReturnTime": "20:25",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "19:56"
+    },
+    {
+      "id": "leave-1794181605266",
+      "staffId": "staff-1",
+      "staffName": "Lic. Diego Casillas",
+      "deskIdentifier": "Módulo Central de Jefatura",
+      "role": "Encargado de Reclamos ODECO",
+      "category": "refrigerio_reglamentario",
+      "destination": "Refrigerio",
+      "departureTime": "19:46",
+      "estimatedReturnTime": "20:16",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "19:56"
+    },
+    {
+      "id": "leave-101",
+      "staffId": "staff-3",
+      "staffName": "Ing. Roberto Siles",
+      "deskIdentifier": "Escritorio ODECO-02 (Técnica)",
+      "role": "Inspector Técnico de Campo / Notificador",
+      "category": "inspeccion_campo",
+      "destination": "Av. Juan Pablo II #450 - Medidor Comercial Taller San José",
+      "caseNumber": "REC-AETN-8042",
+      "caseSubject": "Inspección técnica por fluctuación y baja tensión recurrente",
+      "departureTime": "09:15",
+      "estimatedReturnTime": "10:45",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "justificationNotes": "Se lleva equipo analizador de redes para contraste en presencia del reclamante.",
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "19:44"
+    },
+    {
+      "id": "leave-102",
+      "staffId": "staff-5",
+      "staffName": "Sra. Sonia Choque",
+      "deskIdentifier": "Ventanilla 3 - Orientación Rápida",
+      "role": "Atención al Usuario y Plataforma",
+      "category": "refrigerio_reglamentario",
+      "destination": "Comedor Institucional - Piso 2",
+      "departureTime": "10:00",
+      "estimatedReturnTime": "10:30",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "justificationNotes": "Refrigerio de media mañana reglamentario según turno continuo.",
+      "registeredBy": "staff",
+      "status": "completed",
+      "actualReturnTime": "19:55"
+    },
+    {
+      "id": "leave-100",
+      "staffId": "staff-2",
+      "staffName": "Dra. Carmen Mendoza",
+      "deskIdentifier": "Ventanilla 1 - Audiencias y Descargos",
+      "role": "Analista Legal de Reclamos",
+      "category": "archivo_expedientes",
+      "destination": "Archivo General Central - Sótano 1",
+      "caseNumber": "REC-AETN-8041",
+      "caseSubject": "Desarchivo de antecedentes históricos de facturación",
+      "departureTime": "08:30",
+      "estimatedReturnTime": "08:50",
+      "actualReturnTime": "08:48",
+      "departureDate": "2026-11-08",
+      "isOverdue": false,
+      "overdueMinutes": 0,
+      "registeredBy": "staff",
+      "status": "completed"
+    }
+  ],
+  "casesList": [
+    {
+      "code": "REC-AETN-8041",
+      "consumerName": "Juan Carlos Pérez Villegas",
+      "matter": "Sobretasa por consumo no registrado en medidor trifásico",
+      "assignedToStaffId": "staff-2",
+      "status": "en_tramite"
+    },
+    {
+      "code": "REC-AETN-8042",
+      "consumerName": "Asociación de Vecinos Zona Norte",
+      "matter": "Inspección técnica por fluctuación y baja tensión recurrente",
+      "assignedToStaffId": "staff-3",
+      "status": "en_inspeccion"
+    },
+    {
+      "code": "REC-AETN-8043",
+      "consumerName": "María Eugenia Torrez",
+      "matter": "Reclamo por cobro de reconexión indebido",
+      "assignedToStaffId": "staff-4",
+      "status": "en_tramite"
+    },
+    {
+      "code": "REC-AETN-8044",
+      "consumerName": "Taller Mecánico San José",
+      "matter": "Notificación oficial de informe pericial por daño de motor",
+      "assignedToStaffId": "staff-3",
+      "status": "notificado"
+    },
+    {
+      "code": "REC-AETN-8045",
+      "consumerName": "Elena Quisbert Ramos",
+      "matter": "Solicitud de anulación de cargo por corte no ejecutado",
+      "assignedToStaffId": "staff-2",
+      "status": "en_tramite"
+    }
+  ],
+  "templatesList": [
+    {
+      "id": "tmpl-horas-extras",
+      "code": "FOR-ODE-01",
+      "title": "Solicitud de Horas Extras de Trabajo",
+      "description": "Autorización y registro de horas extraordinarias por cierre de expedientes, atención extendida a usuarios o audiencias de conciliación AETN.",
+      "type": "horas_extras",
+      "isCustom": false,
+      "createdAt": "2026-01-01",
+      "fields": [
+        {
+          "id": "extraHoursDate",
+          "label": "Fecha de Realización de Horas Extras",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "extraHoursStart",
+          "label": "Hora de Inicio (Fuera de 08:00 a 16:00)",
+          "type": "time",
+          "required": true,
+          "defaultValue": "16:00"
+        },
+        {
+          "id": "extraHoursEnd",
+          "label": "Hora de Conclusión",
+          "type": "time",
+          "required": true,
+          "defaultValue": "18:30"
+        },
+        {
+          "id": "totalExtraHours",
+          "label": "Total de Horas Extras Solicitadas (Horas)",
+          "type": "number",
+          "required": true,
+          "defaultValue": "2.5"
+        },
+        {
+          "id": "caseReference",
+          "label": "Expediente / Código de Reclamo AETN Relacionado",
+          "type": "text",
+          "required": false,
+          "placeholder": "Ej. REC-AETN-8041"
+        },
+        {
+          "id": "tasksPerformed",
+          "label": "Tareas Específicas Realizadas y Justificación Operativa",
+          "type": "textarea",
+          "required": true,
+          "placeholder": "Detallar las actividades que justifican el sobretiempo bajo normativa AETN..."
+        }
+      ]
+    },
+    {
+      "id": "tmpl-compensacion",
+      "code": "FOR-ODE-02",
+      "title": "Solicitud de Compensación de Tiempo Extraordinario",
+      "description": "Solicitud formal para compensar horas extraordinarias debidamente autorizadas y acumuladas con tiempo de descanso equivalente.",
+      "type": "compensacion",
+      "isCustom": false,
+      "createdAt": "2026-01-01",
+      "fields": [
+        {
+          "id": "accumulatedHours",
+          "label": "Horas Extraordinarias Acumuladas Disponibles",
+          "type": "number",
+          "required": true,
+          "defaultValue": "4"
+        },
+        {
+          "id": "compensationDate",
+          "label": "Fecha Solicitada para la Compensación",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "compensationHours",
+          "label": "Horas a Compensar en la Jornada",
+          "type": "number",
+          "required": true,
+          "defaultValue": "2"
+        },
+        {
+          "id": "tasksPerformed",
+          "label": "Justificación y Antecedentes del Sobretiempo",
+          "type": "textarea",
+          "required": true,
+          "placeholder": "Indicar en qué fechas se generaron las horas a compensar..."
+        }
+      ]
+    },
+    {
+      "id": "tmpl-vacaciones",
+      "code": "FOR-ODE-03",
+      "title": "Solicitud de Vacaciones y Plan de Relevo",
+      "description": "Solicitud de días de vacación reglamentaria garantizando el relevo de ventanilla para no interrumpir la atención de reclamos ODECO.",
+      "type": "vacaciones",
+      "isCustom": false,
+      "createdAt": "2026-01-01",
+      "fields": [
+        {
+          "id": "managementPeriod",
+          "label": "Gestión Laboral Correspondiente",
+          "type": "text",
+          "required": true,
+          "defaultValue": "Gestión 2025 - 2026"
+        },
+        {
+          "id": "vacationStart",
+          "label": "Fecha de Inicio de Vacaciones",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "vacationEnd",
+          "label": "Fecha de Conclusión de Vacaciones",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "totalWorkingDays",
+          "label": "Total de Días Hábiles Solicitados",
+          "type": "number",
+          "required": true,
+          "defaultValue": "5"
+        },
+        {
+          "id": "replacementStaffName",
+          "label": "Funcionario Designado para el Relevo de Ventanilla",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ej. Dra. Carmen Mendoza / Lic. Javier Morales"
+        },
+        {
+          "id": "tasksPerformed",
+          "label": "Plan de Entrega de Expedientes en Trámite",
+          "type": "textarea",
+          "required": true,
+          "placeholder": "Estado de las reclamaciones que quedan a cargo del relevo..."
+        }
+      ]
+    },
+    {
+      "id": "tmpl-medica",
+      "code": "FOR-ODE-04",
+      "title": "Solicitud y Justificación de Baja / Consulta Médica",
+      "description": "Presentación formal de certificados médicos de la Caja de Salud o consultas de urgencia para justificación de inasistencia.",
+      "type": "medica",
+      "isCustom": false,
+      "createdAt": "2026-01-01",
+      "fields": [
+        {
+          "id": "medicalCenter",
+          "label": "Entidad de Salud o Centro Médico",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ej. Caja Nacional de Salud (CNS) / Policlínico Central"
+        },
+        {
+          "id": "certificateNumber",
+          "label": "Nº de Formulario de Baja / Certificado Médico",
+          "type": "text",
+          "required": true,
+          "placeholder": "Ej. BM-2026-90412"
+        },
+        {
+          "id": "medicalStart",
+          "label": "Fecha de Inicio del Reposo / Consulta",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "medicalEnd",
+          "label": "Fecha de Alta o Retorno a Labores",
+          "type": "date",
+          "required": true
+        },
+        {
+          "id": "medicalLeaveDays",
+          "label": "Días de Baja Médica Prescritos",
+          "type": "number",
+          "required": true,
+          "defaultValue": "1"
+        },
+        {
+          "id": "medicalNotes",
+          "label": "Observaciones / Diagnóstico Breve (Opcional)",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "Tratamiento prescrito e indicaciones de reincorporación..."
+        }
+      ]
+    }
+  ],
+  "requestsList": [
+    {
+      "id": "req-101",
+      "templateId": "tmpl-horas-extras",
+      "requestCode": "SOL-HE-2026-001",
+      "requestType": "horas_extras",
+      "title": "Solicitud de Horas Extras de Trabajo",
+      "staffId": "staff-2",
+      "staffName": "Dra. Carmen Mendoza",
+      "staffRole": "Analista Legal de Reclamos",
+      "deskIdentifier": "Ventanilla 1 - Audiencias y Descargos",
+      "requestDate": "2026-11-08",
+      "status": "visado_encargado",
+      "justification": "Atención de audiencia de conciliación prolongada con la empresa distribuidora y firma de acta transaccional con usuario reclamante.",
+      "specificData": {
+        "extraHoursDate": "2026-11-08",
+        "extraHoursStart": "16:00",
+        "extraHoursEnd": "18:30",
+        "totalExtraHours": 2.5,
+        "caseReference": "REC-AETN-8041",
+        "tasksPerformed": "Conclusión de la audiencia de conciliación por sobretasa de facturación, emisión del acta final conforme a plazos perentorios de la AETN."
+      },
+      "signatures": {
+        "solicitante": {
+          "name": "Dra. Carmen Mendoza",
+          "role": "Analista Legal de Reclamos",
+          "signed": true,
+          "signedDate": "2026-11-08"
+        },
+        "encargadoReclamos": {
+          "name": "Lic. Diego Casillas",
+          "title": "Encargado de Reclamos ODECO",
+          "signed": true,
+          "signedDate": "2026-11-08",
+          "observations": "Conformidad con la necesidad operativa de cerrar el expediente en fecha límite regulatoria."
+        },
+        "jefeDepartamento": {
+          "name": "Ing. Fernando Vaca Guzmán",
+          "title": "Jefe de Departamento de Atención al Cliente y ODECO",
+          "signed": false
+        },
+        "gerenteComercial": {
+          "name": "Lic. Marcelo Arze Quiroga",
+          "title": "Gerente Comercial",
+          "signed": false
+        }
+      }
+    },
+    {
+      "id": "req-102",
+      "templateId": "tmpl-vacaciones",
+      "requestCode": "SOL-VAC-2026-002",
+      "requestType": "vacaciones",
+      "title": "Solicitud de Vacaciones y Plan de Relevo",
+      "staffId": "staff-5",
+      "staffName": "Sra. Sonia Choque",
+      "staffRole": "Atención al Usuario y Plataforma",
+      "deskIdentifier": "Ventanilla 3 - Orientación Rápida",
+      "requestDate": "2026-11-08",
+      "status": "visado_encargado",
+      "justification": "Uso de vacación anual reglamentaria correspondiente a la gestión 2025-2026.",
+      "specificData": {
+        "managementPeriod": "Gestión 2025 - 2026",
+        "vacationStart": "2026-11-15",
+        "vacationEnd": "2026-11-21",
+        "totalWorkingDays": 5,
+        "replacementStaffName": "Lic. Javier Morales",
+        "tasksPerformed": "Los expedientes de recepción rápida serán canalizados a través de Ventanilla 2 con relevo coordinado."
+      },
+      "signatures": {
+        "solicitante": {
+          "name": "Sra. Sonia Choque",
+          "role": "Atención al Usuario y Plataforma",
+          "signed": true,
+          "signedDate": "2026-11-08"
+        },
+        "encargadoReclamos": {
+          "name": "Lic. Diego Casillas",
+          "title": "Encargado de Reclamos ODECO",
+          "signed": true,
+          "signedDate": "2026-11-08",
+          "observations": "Visado conforme a normativa laboral y operativa ODECO."
+        },
+        "jefeDepartamento": {
+          "name": "Ing. Fernando Vaca Guzmán",
+          "title": "Jefe de Departamento de Atención al Cliente y ODECO",
+          "signed": false
+        },
+        "gerenteComercial": {
+          "name": "Lic. Marcelo Arze Quiroga",
+          "title": "Gerente Comercial",
+          "signed": false
+        }
+      }
+    }
+  ],
+  "activeQueueAlert": null,
+  "supervisorPin": "1234",
+  "version": 1794183699558,
+  "contactCenterMessages": [
+    {
+      "id": "msg-1",
+      "senderId": "staff-1",
+      "senderName": "Lic. Diego Casillas",
+      "senderRole": "supervisor",
+      "message": "Buenos días Paola y Andrea. Por favor dar prioridad a las consultas de usuarios del Distrito 4 sobre cortes de energía.",
+      "timestamp": "08:15",
+      "read": true
+    },
+    {
+      "id": "msg-2",
+      "senderId": "staff-7",
+      "senderName": "Lic. Paola Rivera",
+      "senderRole": "contact_center",
+      "message": "Buen día Lic. Casillas, enterada. Ya estamos canalizando y registrando las llamadas con el número de reclamo AETN.",
+      "timestamp": "08:18",
+      "read": true
+    },
+    {
+      "id": "msg-test-1",
+      "senderId": "staff-1",
+      "senderName": "Lic. Diego Casillas",
+      "senderRole": "supervisor",
+      "message": "Hola Contact Center prueba",
+      "timestamp": "10:00",
+      "read": false
+    }
+  ]
+}

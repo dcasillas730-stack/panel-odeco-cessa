@@ -1,0 +1,6 @@
+{
+  "name": "Control Operativo ODECO - Asistencia y Presencia",
+  "description": "Sistema de control interno, presencia en escritorio y reporte de comisiones en tiempo real para personal de ODECO en horario laboral (08:00 a 16:00), bajo normativa AETN y garantía de atención al usuario.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

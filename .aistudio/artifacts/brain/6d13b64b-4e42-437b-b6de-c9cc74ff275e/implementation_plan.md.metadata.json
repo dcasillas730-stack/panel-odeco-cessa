@@ -1,0 +1,6 @@
+{
+  "summary":  "Plan de arquitectura y despliegue multi-dispositivo con sincronización en la nube en tiempo real para dependientes del Lic. Diego Casillas (ODECO). Incluye servidor de sincronización centralizada, modal con código QR y enlace directo para celulares y PCs de ventanilla, e inicio de sesión simplificado por selección de funcionario y puesto.",
+  "updatedAt":  "2026-11-08T23:28:53.999155746Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
