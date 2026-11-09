@@ -1,14 +1,21 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore, doc, getDocFromServer } from 'firebase/firestore';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCNCwMXt-Jr9oEsLYIry_jUjkq2NB6xQg4",
+  apiKey: "AIzaSyCNcWMXt-Jr9oEsLYIry_jUjkq2NB6xQg4",
   authDomain: "panel-odeco-cessa.firebaseapp.com",
   projectId: "panel-odeco-cessa",
   storageBucket: "panel-odeco-cessa.firebasestorage.app",
   messagingSenderId: "65198482395",
   appId: "1:65198482395:web:6811184da6f6c31e8e3dfe"
 };
+
+// ESTAS SON LAS 3 LÍNEAS QUE FALTABAN PARA CONECTAR:
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+export const auth = getAuth(app);
+
 // Operation types for hardened error reporting
 export enum OperationType {
   CREATE = 'create',
