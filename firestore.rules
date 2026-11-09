@@ -1,0 +1,124 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Default deny catch-all
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Helper: validate staff document
+    function isValidStaff(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.fullName is string && data.fullName.size() <= 200
+        && data.role is string && data.role.size() <= 150
+        && data.deskIdentifier is string && data.deskIdentifier.size() <= 150
+        && data.status in ['at_desk', 'on_mission', 'break', 'delayed'];
+    }
+
+    // Helper: validate leave record
+    function isValidLeave(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.staffId is string && data.staffId.size() <= 128
+        && data.staffName is string && data.staffName.size() <= 200
+        && data.category is string && data.category.size() <= 100
+        && data.departureTime is string && data.departureTime.size() <= 20
+        && data.status in ['active', 'completed', 'cancelled'];
+    }
+
+    // Helper: validate queue alert
+    function isValidAlert(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.triggeredByStaffId is string && data.triggeredByStaffId.size() <= 128
+        && data.severity in ['moderada', 'alta', 'critica']
+        && data.status in ['active', 'attending', 'resolved'];
+    }
+
+    // Helper: validate request document
+    function isValidRequest(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.requestCode is string && data.requestCode.size() <= 50
+        && data.staffId is string && data.staffId.size() <= 128
+        && data.title is string && data.title.size() <= 200
+        && data.status in ['borrador', 'enviada', 'visado_encargado', 'aprobada_jefatura', 'rechazada'];
+    }
+
+    // Helper: validate contact message
+    function isValidContactMessage(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.senderId is string && data.senderId.size() <= 128
+        && data.senderRole in ['supervisor', 'contact_center']
+        && data.message is string && data.message.size() <= 1000;
+    }
+
+    // Staff collection: ODECO staff presence & desk management
+    match /staff/{staffId} {
+      allow read: if isValidId(staffId);
+      allow create, update: if isValidId(staffId) && isValidStaff(incoming());
+      allow delete: if isValidId(staffId);
+    }
+
+    // Leaves collection: bathroom breaks, missions, lunch breaks
+    match /leaves/{leaveId} {
+      allow read: if isValidId(leaveId);
+      allow create: if isValidId(leaveId) && isValidLeave(incoming());
+      allow update: if isValidId(leaveId) && isValidLeave(incoming());
+      allow delete: if isValidId(leaveId);
+    }
+
+    // Cases collection: AETN claims
+    match /cases/{caseId} {
+      allow read: if isValidId(caseId);
+      allow create, update: if isValidId(caseId);
+      allow delete: if isValidId(caseId);
+    }
+
+    // Queue alerts: Informaciones queue decongestion alerts
+    match /alerts/{alertId} {
+      allow read: if isValidId(alertId);
+      allow create, update: if isValidId(alertId) && isValidAlert(incoming());
+      allow delete: if isValidId(alertId);
+    }
+
+    // Form templates: horas extras, vacaciones, etc.
+    match /templates/{templateId} {
+      allow read: if isValidId(templateId);
+      allow create, update: if isValidId(templateId);
+      allow delete: if isValidId(templateId);
+    }
+
+    // Staff Requests: digitally signed documents
+    match /requests/{requestId} {
+      allow read: if isValidId(requestId);
+      allow create, update: if isValidId(requestId) && isValidRequest(incoming());
+      allow delete: if isValidId(requestId);
+    }
+
+    // Contact Center messages: real-time communication
+    match /contact_messages/{messageId} {
+      allow read: if isValidId(messageId);
+      allow create: if isValidId(messageId) && isValidContactMessage(incoming());
+      allow update: if isValidId(messageId);
+      allow delete: if isValidId(messageId);
+    }
+
+    // System configuration & parameters
+    match /system/{configId} {
+      allow read: if isValidId(configId);
+      allow create, update: if isValidId(configId);
+      allow delete: if isValidId(configId);
+    }
+  }
+}

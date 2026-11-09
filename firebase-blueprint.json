@@ -1,0 +1,176 @@
+{
+  "entities": {
+    "staff": {
+      "title": "StaffMember",
+      "description": "Funcionario dependiente o jefatura de la oficina ODECO",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "fullName": { "type": "string", "maxLength": 200 },
+        "role": { "type": "string", "maxLength": 150 },
+        "deskIdentifier": { "type": "string", "maxLength": 150 },
+        "phoneExtension": { "type": "string", "maxLength": 50 },
+        "mobileContact": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["at_desk", "on_mission", "break", "delayed"] },
+        "assignedShift": { "type": "string", "maxLength": 100 },
+        "avatarInitials": { "type": "string", "maxLength": 10 },
+        "deskPosition": { "type": "number" },
+        "isProvidingQueueSupport": { "type": "boolean" },
+        "department": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "fullName", "role", "deskIdentifier", "status"]
+    },
+    "leave": {
+      "title": "LeaveRecord",
+      "description": "Registro de salida reglamentaria, comisión de servicio o descanso de un funcionario",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "staffId": { "type": "string", "maxLength": 128 },
+        "staffName": { "type": "string", "maxLength": 200 },
+        "deskIdentifier": { "type": "string", "maxLength": 150 },
+        "role": { "type": "string", "maxLength": 150 },
+        "category": { "type": "string", "maxLength": 100 },
+        "destination": { "type": "string", "maxLength": 300 },
+        "caseNumber": { "type": "string", "maxLength": 100 },
+        "caseSubject": { "type": "string", "maxLength": 300 },
+        "departureTime": { "type": "string", "maxLength": 20 },
+        "estimatedReturnTime": { "type": "string", "maxLength": 20 },
+        "actualReturnTime": { "type": "string", "maxLength": 20 },
+        "departureDate": { "type": "string", "maxLength": 30 },
+        "isOverdue": { "type": "boolean" },
+        "overdueMinutes": { "type": "number" },
+        "justificationNotes": { "type": "string", "maxLength": 500 },
+        "registeredBy": { "type": "string", "maxLength": 50 },
+        "status": { "type": "string", "enum": ["active", "completed", "cancelled"] }
+      },
+      "required": ["id", "staffId", "staffName", "category", "departureTime", "status"]
+    },
+    "case": {
+      "title": "ODECOCase",
+      "description": "Expediente de reclamo regulado por normativa AETN",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string", "maxLength": 100 },
+        "consumerName": { "type": "string", "maxLength": 200 },
+        "matter": { "type": "string", "maxLength": 300 },
+        "assignedToStaffId": { "type": "string", "maxLength": 128 },
+        "status": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["code", "consumerName", "matter"]
+    },
+    "queueAlert": {
+      "title": "QueueHelpAlert",
+      "description": "Alerta de auxilio por congestión en fila de usuarios en informaciones",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "triggeredByStaffId": { "type": "string", "maxLength": 128 },
+        "triggeredByStaffName": { "type": "string", "maxLength": 200 },
+        "deskIdentifier": { "type": "string", "maxLength": 150 },
+        "severity": { "type": "string", "enum": ["moderada", "alta", "critica"] },
+        "estimatedWaitingUsers": { "type": "number" },
+        "message": { "type": "string", "maxLength": 500 },
+        "timestamp": { "type": "string", "maxLength": 30 },
+        "status": { "type": "string", "enum": ["active", "attending", "resolved"] },
+        "respondedByStaffIds": { "type": "array" }
+      },
+      "required": ["id", "triggeredByStaffId", "severity", "status"]
+    },
+    "template": {
+      "title": "CustomFormTemplate",
+      "description": "Plantilla oficial o personalizada de solicitudes internas",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "code": { "type": "string", "maxLength": 50 },
+        "title": { "type": "string", "maxLength": 200 },
+        "description": { "type": "string", "maxLength": 500 },
+        "type": { "type": "string", "maxLength": 100 },
+        "isCustom": { "type": "boolean" },
+        "createdAt": { "type": "string", "maxLength": 50 }
+      },
+      "required": ["id", "code", "title", "type"]
+    },
+    "request": {
+      "title": "StaffRequestDoc",
+      "description": "Solicitud de horas extras, compensación, vacación o médica con firmas visadas",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "templateId": { "type": "string", "maxLength": 128 },
+        "requestCode": { "type": "string", "maxLength": 50 },
+        "requestType": { "type": "string", "maxLength": 100 },
+        "title": { "type": "string", "maxLength": 200 },
+        "staffId": { "type": "string", "maxLength": 128 },
+        "staffName": { "type": "string", "maxLength": 200 },
+        "staffRole": { "type": "string", "maxLength": 150 },
+        "deskIdentifier": { "type": "string", "maxLength": 150 },
+        "requestDate": { "type": "string", "maxLength": 30 },
+        "status": { "type": "string", "enum": ["borrador", "enviada", "visado_encargado", "aprobada_jefatura", "rechazada"] },
+        "justification": { "type": "string", "maxLength": 600 }
+      },
+      "required": ["id", "requestCode", "staffId", "title", "status"]
+    },
+    "contactMessage": {
+      "title": "ContactCenterMessage",
+      "description": "Mensaje en línea entre el Encargado Lic. Diego Casillas y operadoras de Contact Center",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "senderId": { "type": "string", "maxLength": 128 },
+        "senderName": { "type": "string", "maxLength": 200 },
+        "senderRole": { "type": "string", "enum": ["supervisor", "contact_center"] },
+        "message": { "type": "string", "maxLength": 1000 },
+        "timestamp": { "type": "string", "maxLength": 30 },
+        "read": { "type": "boolean" }
+      },
+      "required": ["id", "senderId", "senderRole", "message"]
+    },
+    "systemConfig": {
+      "title": "SystemConfig",
+      "description": "Configuración institucional y credenciales de control interno",
+      "type": "object",
+      "properties": {
+        "supervisorPin": { "type": "string", "maxLength": 20 },
+        "institutionName": { "type": "string", "maxLength": 150 },
+        "encargadoName": { "type": "string", "maxLength": 150 }
+      },
+      "required": ["supervisorPin"]
+    }
+  },
+  "firestore": {
+    "/staff/{staffId}": {
+      "schema": "staff",
+      "description": "Listado de funcionarios y estado de ventanillas"
+    },
+    "/leaves/{leaveId}": {
+      "schema": "leave",
+      "description": "Registros de salidas y comisiones de trabajo"
+    },
+    "/cases/{caseId}": {
+      "schema": "case",
+      "description": "Expedientes de reclamo AETN"
+    },
+    "/alerts/{alertId}": {
+      "schema": "queueAlert",
+      "description": "Alertas de congestión de fila en informaciones"
+    },
+    "/templates/{templateId}": {
+      "schema": "template",
+      "description": "Plantillas de formatos de solicitudes"
+    },
+    "/requests/{requestId}": {
+      "schema": "request",
+      "description": "Solicitudes emitidas con firmas de jefatura y gerencia"
+    },
+    "/contact_messages/{messageId}": {
+      "schema": "contactMessage",
+      "description": "Mensajes en tiempo real entre Jefatura y Contact Center"
+    },
+    "/system/{configId}": {
+      "schema": "systemConfig",
+      "description": "Parámetros globales del sistema de control ODECO"
+    }
+  }
+}
